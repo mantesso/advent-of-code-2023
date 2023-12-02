@@ -2,7 +2,7 @@ import re
 
 sum_of_power = 0
 with open('input.txt') as file:
-    for id, game in enumerate(file):
+    for game in file:
         game = re.sub(r'Game \d+: ', '', game).replace(';', ',').strip()
         min = { 'red': 0, 'green': 0, 'blue': 0}
         for cube in game.split(', '):
